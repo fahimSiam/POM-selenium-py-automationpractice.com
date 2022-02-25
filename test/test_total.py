@@ -16,9 +16,9 @@ from test.test_signup import SignupTest
 
 class TotalTest(unittest.TestCase):
     global loginEmail1
-    loginEmail1 = "siam.qups25@gmail.com"
+    loginEmail1 = "siam.qups27@gmail.com"
     global loginEmail2
-    loginEmail2 = "siam.qups26@gmail.com"
+    loginEmail2 = "siam.qups28@gmail.com"
     
     @classmethod
     def setUpClass(cls):
