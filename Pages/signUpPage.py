@@ -27,7 +27,7 @@ class SignUpPage():
         self.phone_mobile_feild_id = Locators.phone_mobile_feild_id
         self.alias_feild_id = Locators.alias_feild_id
         self.submit_button_id = Locators.submit_button_id        
-
+        self.signout_button_xpath = Locators.signout_button_xpath
 
     def enter_id_gender(self):
         self.driver.find_element(By.ID, self.select_gender_mr_field_id).click()
@@ -43,6 +43,7 @@ class SignUpPage():
         self.driver.find_element(By.ID, self.Create_email_field_id).send_keys(email)
 
     def enter_password(self, password):
+        self.driver.find_element(By.ID, self.password_field_id).clear()
         self.driver.find_element(By.ID, self.password_field_id).send_keys(password)
 
     def enter_days(self, days):
@@ -95,22 +96,7 @@ class SignUpPage():
 
     def click_submit_button(self):
         self.driver.find_element(By.ID, self.submit_button_id).click()
-        time.sleep(20)
+        time.sleep(5)
 
-""" driver.find_element(By.ID, "customer_lastname").send_keys("Qup")
-driver.find_element(By.ID, "passwd").send_keys("123456789")
-driver.find_element(By.ID, "days").send_keys("1")
-driver.find_element(By.ID, "months").send_keys("January")
-driver.find_element(By.ID, "years").send_keys("1997")
-driver.find_element(By.ID, "company").send_keys("Qup")
-driver.find_element(By.ID, "address1").send_keys("Qup")
-driver.find_element(By.ID, "address2").send_keys("Qup")
-driver.find_element(By.ID, "city").send_keys("Qup")
-driver.find_element(By.ID, "id_state").send_keys("Alaska")
-driver.find_element(By.ID, "postcode").send_keys("10001")
-driver.find_element(By.ID, "id_country").send_keys("United States")
-driver.find_element(By.ID, "other").send_keys("Qup")
-driver.find_element(By.ID, "phone").send_keys("01234567890")
-driver.find_element(By.ID, "phone_mobile").send_keys("01324567890")
-driver.find_element(By.ID, "alias").send_keys("Qup")
-driver.find_element(By.ID, "submitAccount").click()   """ 
+    def click_signout_button(self):
+        self.driver.find_element(By.XPATH, self.signout_button_xpath).click()

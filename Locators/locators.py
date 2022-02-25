@@ -5,7 +5,7 @@ class Locators():
     click_sign_in_partial_link_text= "Sign in"
 
     # Login Page Locators
-    email_field_id = "email"
+    email_field_xpath = "//input[@id='email']"
     password_field_id = "passwd"
     submit_Login_button_id = "SubmitLogin"
     submit_register_button_id= "SubmitCreate"
@@ -35,6 +35,7 @@ class Locators():
     phone_mobile_feild_id = "phone_mobile"
     alias_feild_id = "alias"
     submit_button_id = "submitAccount"
+    signout_button_xpath="//header/div[2]/div[1]/div[1]/nav[1]/div[2]/a[1]"
     
 
     # My Acount Locators
@@ -52,13 +53,12 @@ class Locators():
     blue_tshirt_item="//div[@id='center_column']/ul/li[1]/div/div[1]/div/a[1]/img"
 
     # Checkout Locators
-    #summary_proceed_to_checkout="self./html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/p[2]/a[1]/span[1]"
-    summary_proceed_to_checkout="//span[contains(text(),'Proceed to checkout')]"
-    address_proceed_to_checkout_button_xpath="//span[contains(text(),'Proceed to checkout')]"
+    summary_proceed_to_checkout="//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/p[2]/a[1]/span[1]"
+    address_proceed_to_checkout_button_xpath="//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/form[1]/p[1]/button[1]/span[1]"
     shipping_agree_to_terms_checkbox_id="cgv"
-    shipping_proceed_to_checkout_button_xpath="//span[contains(text(),'Proceed to checkout')]"
+    shipping_proceed_to_checkout_button_xpath="//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/form[1]/p[1]/button[1]/span[1]"
     pay_by_check_partial_link_text="Pay by check"
     signout_partial_link_text="Sign out"
-"
+    total_price_xpath="//span[@id='total_price']"
    
     

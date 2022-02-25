@@ -5,7 +5,7 @@ class LoginPage():
 
     def __init__(self, driver):
         self.driver = driver
-        self.email_field_id = Locators.email_field_id
+        self.email_field_xpath = Locators.email_field_xpath
         self.password_field_id = Locators.password_field_id
         self.submit_button_id = Locators.submit_Login_button_id
         self.submit_register_button_id = Locators.submit_register_button_id
@@ -13,8 +13,8 @@ class LoginPage():
 
 
     def enter_username(self, username):
-        self.driver.find_element(By.ID, self.email_field_id).clear()
-        self.driver.find_element(By.ID, self.email_field_id).send_keys(username)
+        self.driver.find_element(By.XPATH, self.email_field_xpath).clear()
+        self.driver.find_element(By.XPATH, self.email_field_xpath).send_keys(username)
     
     
     def enter_password(self, password):

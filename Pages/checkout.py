@@ -14,6 +14,7 @@ class Checkout():
         self.shipping_agree_to_terms_checkbox_id=Locators.shipping_agree_to_terms_checkbox_id
         self.pay_by_check_partial_link_text=Locators.pay_by_check_partial_link_text
         self.signout_partial_link_text=Locators.signout_partial_link_text
+        self.total_price_xpath=Locators.total_price_xpath
 
     def click_summary_proceed_to_checkout(self):
         self.driver.find_element(By.XPATH, self.summary_proceed_to_checkout).click()
@@ -31,3 +32,7 @@ class Checkout():
     def click_signout(self):
         self.driver.find_element(By.PARTIAL_LINK_TEXT, self.signout_partial_link_text).click()
         time.sleep(15)
+
+    def print_total_price(self):
+        total_price = self.driver.find_element(By.XPATH, Locators.total_price_xpath).text
+        print("THE TOTAL PRICE IS: "+total_price)
